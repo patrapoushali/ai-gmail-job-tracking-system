@@ -184,3 +184,17 @@ small {
 #export-csv:hover {
     background: #eff6ff;
 }
+.open-email-btn {
+    background: #eef2ff;        /* soft indigo */
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.open-email-btn:hover {
+    background: #e0e7ff;
+}
