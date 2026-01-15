@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="header">
+        <h2>Job Tracker AI</h2>
+        <button id="sync-btn">Sync Gmail</button>
+    </div>
+
+    <div id="stats">
+        <span id="job-count">0</span> Applications Tracked
+    </div>
+
+    <div id="job-list" class="list-container">
+    </div>
+
+    <div class="settings-link">
+        <input type="password" id="api-key" placeholder="Enter Gemini API Key">
+        <button id="save-key">Save Key</button>
+    </div>
+
+    <!-- /Just for dev purpose -->
+    <button id="open-dashboard">Open Full Dashboard</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

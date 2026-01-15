@@ -1,0 +1,186 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --text: #1e293b;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h2 {
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.filter-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.filter-btn.active {
+    background: #eff6ff;
+    color: var(--primary);
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#refresh-dashboard {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Table */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    padding: 16px;
+    background: #f1f5f9;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+td {
+    padding: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.status-pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-Applied {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-Interviewing {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.status-Rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-Offer {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Highlight rows with interviews */
+.row-highlight {
+    background-color: #fffbeb !important;
+    /* Light amber background */
+}
+
+.interview-icon {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+small {
+    color: #b45309;
+    /* Amber text for interview time */
+    font-weight: 600;
+    display: block;
+    margin-top: 4px;
+}
+
+.delete-btn {
+    background: none;
+    border: 1px solid #e2e8f0;
+    color: #ef4444;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+}
+
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#export-csv {
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#export-csv:hover {
+    background: #eff6ff;
+}

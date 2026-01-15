@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Tracker Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>JobTracker<span>AI</span></h2>
+        </div>
+        <nav>
+            <button class="filter-btn active" data-filter="all">All Applications</button>
+            <button class="filter-btn" data-filter="Interviewing">Interviewing</button>
+            <button class="filter-btn" data-filter="Applied">Applied</button>
+            <button class="filter-btn" data-filter="Offer">Offers</button>
+            <button class="filter-btn" data-filter="Rejected">Archive</button>
+        </nav>
+        <div class="stats-panel">
+            <div class="stat-card">
+                <label>Total</label>
+                <div id="total-count">0</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <h1>Application History</h1>
+            <div class="header-actions">
+                <button id="export-csv">Export to CSV</button>
+                <button id="refresh-dashboard">Refresh Data</button>
+            </div>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Company</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="dashboard-table-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
