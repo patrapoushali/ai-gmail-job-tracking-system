@@ -1,8 +1,11 @@
 # AI Job Application Tracker 🚀
+
       - Maintained by Poushali Patra
-A Chrome Extension that automatically syncs job application emails from your Gmail, analyzes them using **Gemini 2.5 Flash**, and organizes them into a clean dashboard with interview tracking.
+
+A Chrome Extension that automatically syncs job application emails from your Gmail, analyzes them using **OpenRouter AI**, and organizes them into a clean dashboard with interview tracking.
 
 ## 🌟 Features
+
 - **Gmail Sync**: One-click retrieval of job-related emails.
 - **AI Analysis**: Extracts Company, Role, Status, and Interview dates automatically.
 - **Job Dashboard**: Sort, filter, and manage your applications in a full-page view.
@@ -16,6 +19,7 @@ A Chrome Extension that automatically syncs job application emails from your Gma
 Follow these steps to get the extension running on your local machine.
 
 ### 1. Load the Extension into Chrome
+
 1. Download or clone this repository to your computer.
 2. Open Google Chrome and navigate to `chrome://extensions`.
 3. Enable **Developer mode** (toggle in the top right corner).
@@ -23,6 +27,7 @@ Follow these steps to get the extension running on your local machine.
 5. **Important:** Copy the **Extension ID** (a long string of random letters) that appears on the extension card. You will need this for the next step.
 
 ### 2. Configure Google Cloud (OAuth 2.0)
+
 To allow the extension to read your emails and add to your calendar, you must register it in the Google Cloud Console.
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
@@ -42,19 +47,25 @@ To allow the extension to read your emails and add to your calendar, you must re
    - Click **Create** and copy your new **Client ID**.
 
 ### 3. Update the Code
+
 1. Open the project folder in your code editor.
 2. Open `manifest.json`.
 3. Replace `YOUR_GOOGLE_CLIENT_ID_HERE` with the Client ID you just created.
 4. Return to `chrome://extensions` and click the **Reload** icon on the extension card.
 
-### 4. Get a Gemini API Key
-1. Visit [Google AI Studio](https://aistudio.google.com/).
-2. Click **Get API key** and create a new key.
-3. Open the Extension Popup in Chrome, go to **Settings**, paste the key, and click **Save**.
+### 4. Get an OpenRouter API Key
+
+1. Visit [OpenRouter](https://openrouter.ai/).
+2. Sign up for a free account.
+3. Navigate to **Keys** in your dashboard and create a new API key.
+4. Open the Extension Popup in Chrome, paste the key, and click **Save Key**.
+
+**Note:** OpenRouter provides access to multiple AI models. This extension uses `google/gemini-2.0-flash-exp:free` by default, which is free to use.
 
 ---
 
 ## 🚀 How to Use
+
 1. **Sync**: Click the "Sync Gmail" button in the popup.
 2. **Authorize**: A Google login window will appear. Select your account and click **Allow** (you may need to click "Advanced > Go to App" if it says unverified).
 3. **View**: Click "Full Dashboard" to see your tracked jobs.
@@ -63,10 +74,12 @@ To allow the extension to read your emails and add to your calendar, you must re
 ---
 
 ## 📁 Project Structure
+
 - `manifest.json`: Extension configuration and permissions.
-- `scripts/`: Logic for Gmail, Gemini API, and background processes.
+- `scripts/`: Logic for Gmail, OpenRouter API, and background processes.
 - `dashboard/`: HTML/CSS/JS for the main user interface.
 - `popup/`: The small menu that appears when clicking the extension icon.
 
 ## 📜 License
+
 MIT License - feel free to use and modify for your own job search!
